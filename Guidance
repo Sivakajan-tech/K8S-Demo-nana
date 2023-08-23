@@ -1,0 +1,5 @@
+1. We need to create some basic files
+    1. ConfigMap - MongoDB Endpoint
+    2. Secret - MongoDB Password and Username
+    3. Configuration file for deployment MongoDB application with its service
+    4. Kubernetes configuration file for demo application with its service
