@@ -3,3 +3,46 @@
     2. Secret - MongoDB Password and Username
     3. Configuration file for deployment MongoDB application with its service
     4. Kubernetes configuration file for demo application with its service
+
+
+These are for creating the mongo db pod.
+kubectl apply -f mongo-secret.yaml 
+kubectl get secret
+kubectl apply -f mongo.yaml    
+kubectl get all
+
+Now we create internal service, so other pods and services
+can talk to the pod mongodb
+kubectl apply -f mongo.yaml
+kubectl get service
+kubernetes        ClusterIP   10.96.0.1       <none>        443/TCP     153m
+mongodb-service   ClusterIP   10.96.170.160   <none>        27017/TCP   21s
+
+sivakajan@Sivakajans-MacBook-Pro K8S-Demo-nana % kubectl describe service mongodb-service
+Name:              mongo-service
+Namespace:         default
+Labels:            <none>
+Annotations:       <none>
+Selector:          app=mongo
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.100.188.196
+IPs:               10.100.188.196
+Port:              <unset>  27017/TCP
+TargetPort:        27017/TCP
+Endpoints:         10.244.0.10:27017
+Session Affinity:  None
+Events:            <none>
+
+
+Create Mongo Express database
+env - Which db address we need to connect(server)
+    - Username
+    - Password
+
+
+Access mongo-express from a browser
+minikube service mongo-express-service
+
+ß
