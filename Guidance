@@ -45,4 +45,7 @@ env - Which db address we need to connect(server)
 Access mongo-express from a browser
 minikube service mongo-express-service
 
-ß
+
+kubectl get replicaset mongo-express-8f7c6d94b  -o yaml 
+kubectl get pod mongo-express-8f7c6d94b-95jdk -o yaml
+kubectl get deployment mongo-deployment -n default -o yaml > Desktop/MongoK8sPlayground/temp.yaml  
