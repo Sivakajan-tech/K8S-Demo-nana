@@ -20,7 +20,6 @@ This is a Playground project for familiar with Kubernetes and Containerization.
 
     kubectl describe pod mongodb-deployment-xxxxxx
     kubectl describe service mongodb-service
-    kubectl logs mongo-express-xxxxxx
 
 ### give a URL to external service in minikube
 
